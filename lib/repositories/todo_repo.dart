@@ -22,7 +22,7 @@ class TodoRepository {
   Future<dynamic> removeTodo(
       {required Database database, required int id}) async {
     return await database.transaction((txn) async {
-      return await txn.rawDelete('DELETE FROM todoapp where id = $id');
+      return await txn.rawDelete("DELETE FROM 'todoapp' WHERE id = $id");
     });
   }
 }
